@@ -10,13 +10,13 @@ class UserName
     {
 
         if (strlen($name) < 3) {
-            throw new \Exception("El nombre debe tener mas de 3 caracteres");
+            throw new \InvalidArgumentException("El nombre debe tener mas de 3 caracteres");
         }
 
         return $this->name = $name;
     }
 
-    public function  getName(): string
+    public function  value(): string
     {
         return $this->name;
     }
