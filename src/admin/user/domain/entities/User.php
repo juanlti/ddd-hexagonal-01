@@ -14,12 +14,12 @@ class User
     private UserEmail $email;
     private UserPassword $password;
 
-    public function __construct(int $id, UserName $name, UserEmail $email, UserPassword $password)
+    public function __construct(int $id, UserName $name, UserEmail $email,?UserPassword $password)
     {
         $this->id = $id;
         $this->name = $name;
         $this->email = $email;
-        $this->password = $password;
+        $this->password = $password?? new UserPassword('12345');
 
     }
 
