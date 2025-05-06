@@ -4,7 +4,7 @@ namespace Src\admin\user\domain\contracts;
 
 use Src\admin\user\domain\entities\User;
 
-interface UserRepositoryInterface
+interface  UserRepositoryInterface
 {
     public function findById(int $id):?User;
 

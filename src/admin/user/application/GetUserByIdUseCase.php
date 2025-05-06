@@ -3,6 +3,7 @@
 namespace Src\admin\user\application;
 
 use Src\admin\user\domain\contracts\UserRepositoryInterface;
+use Src\admin\user\domain\entities\User;
 
 
 class GetUserByIdUseCase
@@ -15,9 +16,9 @@ class GetUserByIdUseCase
         $this->userRepository = $userInterface;
     }
 
-    public function __invoke(int $id)
+    public function __invoke(int $id): ?User
     {
-        $this->userRepository->findById($id);
+        return $this->userRepository->findById($id);
 
     }
 

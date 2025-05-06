@@ -9,7 +9,7 @@ use Src\admin\user\domain\value_objects\UserPassword;
 class User
 {
 
-    private int $id = -1;
+    private int $id;
     private UserName $name;
     private UserEmail $email;
     private UserPassword $password;
@@ -36,5 +36,9 @@ class User
     public function password(): UserPassword
     {
         return $this->password;
+    }
+
+    public function id():int {
+        return $this->id;
     }
 }
